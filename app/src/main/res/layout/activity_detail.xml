@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card-view="http://schemas.android.com/apk/res-auto"
+    tools:context=".DetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_item_user"
+            android:layout_width="192dp"
+            android:layout_height="192dp"
+            android:layout_marginTop="42dp"
+            card-view:layout_constraintStart_toStartOf="parent"
+            card-view:layout_constraintEnd_toEndOf="parent"
+            card-view:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars"/>
+
+        <TextView
+            android:id="@+id/tv_item_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="@string/name"
+            card-view:layout_constraintTop_toBottomOf="@id/img_item_user"
+            card-view:layout_constraintStart_toStartOf="@id/img_item_user"
+            card-view:layout_constraintEnd_toEndOf="@id/img_item_user"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="52dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            card-view:layout_constraintBottom_toTopOf="@id/tv_item_username"
+            card-view:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:text="@string/name"/>
+
+        <TextView
+            android:id="@+id/tv_item_username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            card-view:layout_constraintTop_toBottomOf="@id/tv_item_name"
+            card-view:layout_constraintStart_toStartOf="@id/tv_item_name"
+            card-view:layout_constraintEnd_toEndOf="@id/tv_item_name"
+            android:layout_marginTop="16dp"
+            tools:text="@string/username"
+            android:textSize="15sp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            card-view:layout_constraintTop_toBottomOf="@id/tv_item_name"
+            card-view:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:text="@string/username"/>
+
+        <TextView
+            android:id="@+id/tv_item_follow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            card-view:layout_constraintStart_toStartOf="parent"
+            card-view:layout_constraintTop_toBottomOf="@+id/tv_item_username"
+            card-view:layout_constraintEnd_toStartOf="@+id/tv_item_follower"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:textAlignment="center"
+            tools:text="@string/follow"/>
+
+        <TextView
+            android:id="@+id/tv_item_follower"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            card-view:layout_constraintEnd_toEndOf="parent"
+            card-view:layout_constraintStart_toEndOf="@id/tv_item_follow"
+            card-view:layout_constraintTop_toBottomOf="@+id/tv_item_username"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAlignment="center"
+            tools:text="@string/follower"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            card-view:layout_constraintTop_toBottomOf="@id/tv_item_follow"
+            card-view:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:text="@string/repository"/>
+
+        <TextView
+            android:id="@+id/tv_item_repository"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            card-view:layout_constraintTop_toBottomOf="@id/tv_item_follow"
+            card-view:layout_constraintStart_toStartOf="@id/img_item_user"
+            card-view:layout_constraintEnd_toEndOf="@id/img_item_user"
+            android:layout_marginTop="16dp"
+            android:textAlignment="center"
+            tools:text="@string/repository"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            card-view:layout_constraintTop_toBottomOf="@id/tv_item_repository"
+            card-view:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:text="@string/location"/>
+
+        <TextView
+            android:id="@+id/tv_item_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            card-view:layout_constraintTop_toBottomOf="@id/tv_item_repository"
+            card-view:layout_constraintStart_toStartOf="@id/img_item_user"
+            card-view:layout_constraintEnd_toEndOf="@id/img_item_user"
+            android:layout_marginTop="16dp"
+            tools:text="@string/location"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            card-view:layout_constraintTop_toBottomOf="@id/tv_item_location"
+            card-view:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:text="@string/company"/>
+
+        <TextView
+            android:id="@+id/tv_item_company"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            card-view:layout_constraintTop_toBottomOf="@id/tv_item_location"
+            card-view:layout_constraintStart_toStartOf="@id/img_item_user"
+            card-view:layout_constraintEnd_toEndOf="@id/img_item_user"
+            android:layout_marginTop="16dp"
+            android:textAlignment="center"
+            tools:text="@string/company"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
